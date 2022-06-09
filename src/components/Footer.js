@@ -18,10 +18,10 @@ export class Footer extends Component {
                 <strong>Contect</strong>: +923151107591
               </p>
               <p>
-                <strong>Address</strong>: R-2 SECTOR 9 NORTH KARACHI{" "}
+                <strong>Address</strong>: R-2 SECTOR 9 NORTH KARACHI
               </p>
               <p>
-                <strong>Creating-Date</strong>: 6/5/2022{" "}
+                <strong>Creating-Date</strong>: 6/5/2022
               </p>
             </div>
             <div
