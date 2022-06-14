@@ -3,12 +3,13 @@ import React, { Component } from "react";
 export class Footer extends Component {
   render() {
     return (
+      
       <div
         className="footer text-center"
-        style={{ color: "black", backgroundColor: "#E5BF33" }}
+        style={{ color: "black", backgroundColor: "#6666ff" }}
       >
         <footer>
-          <h1 style={{ backgroundColor: "#F0DB8E" }}>ABOUT</h1>
+          <h1 style={{ backgroundColor: " #ffb380" }}>ABOUT</h1>
           <div className="row  d-flex justify-content-between m-4">
             <div
               className="col md-6 my-5 mx-1"

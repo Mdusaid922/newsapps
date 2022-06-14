@@ -4,10 +4,10 @@ export class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg" style={{ background: "#30280D" }} >
+        <nav className="navbar navbar-expand-lg" style={{ background: "#ffb3b3" , opacity:'0.8'}} >
           <div className="container-fluid">
-            <Link className="navbar-brand" style={{ color: "#E5BF33" }} to="/">
-              <strong>NewsMonkey</strong>
+            <Link className="navbar-brand" style={{ color: "#000080" }} to="/">
+              <strong><b>NewsMonkey</b></strong>
             </Link>
             <button
               className="navbar-toggler"
@@ -25,38 +25,38 @@ export class NavBar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/">
-                  Home
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/">
+                  <b> Home</b>
                 </Link>
                 </li>
 
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/Business">
-                  Business
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/Business">
+                  <b>Business</b>
                 </Link>
                 </li>
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/Entertainment">
-                  Entertainment
-                </Link>
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/Entertainment">
+                  <b>Entertainment
+                  </b>               </Link>
                 </li>
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/General">
-                  General
-                </Link>
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/General">
+                  <b> General
+                  </b>          </Link>
                 </li>
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/Health">
-                  Health
-                </Link>
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/Health">
+                  <b>Health
+                  </b>        </Link>
                 </li>
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/Science">
-                  Science
-                </Link>
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/Science">
+                  <b>Science
+                  </b>         </Link>
                 </li>
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/Sports">
-                  Sports
-                </Link>
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/Sports">
+                  <b>Sports
+                  </b>        </Link>
                 </li>
-                <li className="nav-item"><Link className="nav-link" style={{ color: "#F0DB8E" }} to="/Technology">
-                  Technology
-                </Link>
+                <li className="nav-item"><Link className="nav-link" style={{ color: "#000080" }} to="/Technology">
+                  <b>Technology
+                  </b>            </Link>
                 </li>
               </ul>
             </div>

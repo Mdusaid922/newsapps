@@ -7,7 +7,7 @@ export class NewsItem extends Component {
       <div>
         <div
           className="card"
-          style={{ backgroundColor: "#F0DB8E", color: "black" }}
+          style={{ backgroundColor: "#80ccff", color: "black"}}
         >
           <img
             src={!imageUrl ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKy9w_Y_EZGXUbQSxvuUmXnenYo7K2miY3Wg&usqp=CAU" : imageUrl}
@@ -15,18 +15,18 @@ export class NewsItem extends Component {
             className="card-img-top "
             alt="..."
           />
-          <div className="card-body">
+          <div className="card-body" style={{}}>
             <h5 className="card-title"> {title}...<br /><span class="badge bg-success my-2">{source}</span></h5>
             <p className="card-text"> {description}...</p>
             <p className="card-text" >
-              <small style={{ color: "green" }}>By:{!author ? "unknown" : author}  <br /> On:{new Date(date).toGMTString()}</small>
+              <small style={{ color: "blue" }}>By:{!author ? "unknown" : author}  <br /> On:{new Date(date).toGMTString()}</small>
             </p>
             <a
               rel="noreferrer"
               href={newsUrl}
               target="_blank"
               className="btn"
-              style={{ backgroundColor: "#E5BF33", color: "black" }}
+              style={{ backgroundColor: "#66a3ff", color: "black" }}
 
             >
               <b>Read News</b>
