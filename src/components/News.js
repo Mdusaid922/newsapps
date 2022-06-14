@@ -27,7 +27,8 @@ export class News extends Component {
   }
 
   async update() {
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ba7817bb863c491f8252ff5257e2ecc6&page=${this.state.page}
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}
+    &category=${this.props.category}&apiKey=ba7817bb863c491f8252ff5257e2ecc6&page=${this.state.page}
     &pageSize=${this.props.pageSize}`;
     this.setState({ loading: true })
     let data = await fetch(url);
@@ -82,7 +83,7 @@ export class News extends Component {
                   <NewsItem
                     title={element.title ? element.title.slice(0, 45) : ""}
                     description={
-                      element.description ? element.description.slice(0, 80) : ""}
+                    element.description ? element.description.slice(0, 80) : ""}
                     imageUrl={element.urlToImage}
                     newsUrl={element.url}
                     author={element.author}
