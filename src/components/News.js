@@ -22,16 +22,21 @@ export class News extends Component {
       articles: [],
       loading: false,
       page: 1,
-      totalResults:0
+      totalResults: 0
     };
   }
 
   async update() {
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ba7817bb863c491f8252ff5257e2ecc6&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    this.props.setProgress(0);
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true })
     let data = await fetch(url);
+    this.props.setProgress(500);
     let parsData = await data.json();
+    this.props.setProgress(70);
     this.setState({ articles: parsData.articles, totalResults: parsData.totalResults, loading: false });
+    this.props.setProgress(100);
+
   }
 
   async componentDidMount() {
@@ -50,7 +55,7 @@ export class News extends Component {
   }
   fetchMoreData = async () => {
     this.setState({ page: this.state.page + 1 })
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ba7817bb863c491f8252ff5257e2ecc6&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true })
     let data = await fetch(url);
     let parsData = await data.json();
@@ -70,7 +75,7 @@ export class News extends Component {
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
           hasMore={this.state.articles.length !== this.totalResults}
-          loader={<Spinner />}
+          loader={<Spinner/>}
         >
 
           <div className="container">
@@ -80,7 +85,7 @@ export class News extends Component {
                   <NewsItem
                     title={element.title ? element.title.slice(0, 45) : ""}
                     description={
-                    element.description ? element.description.slice(0, 80) : ""}
+                      element.description ? element.description.slice(0, 80) : ""}
                     imageUrl={element.urlToImage}
                     newsUrl={element.url}
                     author={element.author}
