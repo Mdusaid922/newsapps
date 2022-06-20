@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-export class Spinner extends Component {
-  render() {
+import React from "react";
+const Spinner=()=> {
+  
     return (
       <div className="text-center p-4">
         {/* <img src={loading} alt="loading" /> */}
-        <h4>loading...</h4>
+        <h4 style={{color:"blue"}}>Loading...</h4>
       </div>
     );
-  }
+  
 }
 
 export default Spinner;
